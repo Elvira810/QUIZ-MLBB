@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff0f7">
+    <title>MLBB Quiz ♡</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="deco deco-one">✦</div>
+    <div class="deco deco-two">♡</div>
+    <div class="deco deco-three">✧</div>
+
+    <div class="floating-decor decor-heart">♡</div>
+    <div class="floating-decor decor-star">✦</div>
+    <div class="floating-decor decor-bow">୨୧</div>
+    <div class="floating-decor decor-sparkle">✧</div>
+    <div class="floating-decor decor-heart-two">♥</div>
+
+    <main class="app">
+        <header class="topbar">
+            <a class="brand" href="#" aria-label="MLBB Quiz Home">
+                <span class="brand-icon">⚔</span>
+                <span>mlbb<span class="brand-pink">.quiz</span></span>
+            </a>
+            <span class="edition">PLAYER EDITION ♡</span>
+        </header>
+
+        <section class="hero">
+            <div class="eyebrow">
+                <span class="live-dot"></span>
+                THE LAND OF DAWN AWAITS
+            </div>
+
+            <h1>ARE YOU A<br><span>REAL PLAYER?</span></h1>
+            <p>Seberapa paham kamu sama MLBB? Buktikan ya bub ♡</p>
+
+            <div class="hero-stickers">
+                <span>🎀 Cute kayak kamu</span>
+                <span>⚡ 15 pertanyaan</span>
+                <span>💀 chaos</span>
+            </div>
+        </section>
+
+        <!-- START SCREEN -->
+        <section id="start-screen" class="panel start-panel active">
+            <div class="mascot">🎮</div>
+            <div class="mini-label">YOUR MISSION</div>
+            <h2>Jawab jujur, syap?</h2>
+
+            <p>
+                15 pertanyaan, 4 pilihan
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-icon">✦</span>
+                    <strong>15</strong>
+                    <small>SOAL</small>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-icon">♡</span>
+                    <strong>4</strong>
+                    <small>PILIHAN</small>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-icon">🏆</span>
+                    <strong>15</strong>
+                    <small>MAX SCORE</small>
+                </div>
+            </div>
+
+            <button id="start-btn" class="primary-btn">
+                GAS MULAI <span>↗</span>
+            </button>
+
+            <p class="footnote">
+                ⚠️ Hasil quiz tidak menjamin lu jago ranked.
+            </p>
+        </section>
+
+        <!-- QUIZ SCREEN -->
+        <section id="quiz-screen" class="panel quiz-panel">
+            <div class="quiz-meta">
+                <span id="question-counter">QUESTION 01 / 15</span>
+                <span class="score-pill">✦ <b id="current-score">0</b> POIN</span>
+            </div>
+
+            <div
+                class="progress-track"
+                id="progress-track"
+                role="progressbar"
+                aria-label="Progress quiz"
+                aria-valuemin="0"
+                aria-valuemax="15"
+                aria-valuenow="0"
+            >
+                <div id="progress-bar"></div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-top">
+                    <span id="question-number">QUESTION 01</span>
+                    <span>♡</span>
+                </div>
+
+                <div id="question-image" class="question-image"></div>
+
+                <h2 id="question-text">Pertanyaan muncul di sini.</h2>
+
+                <p class="question-hint">
+                    Pilih jawaban yang paling tepat, jangan asal tap ya bub ♡
+                </p>
+            </div>
+
+            <div id="answer-options" class="answer-options"></div>
+            <div id="feedback" class="feedback" aria-live="polite"></div>
+
+            <button id="next-btn" class="primary-btn next-btn" disabled>
+                LANJUT <span>→</span>
+            </button>
+        </section>
+
+        <!-- RESULT SCREEN -->
+        <section id="result-screen" class="panel result-panel">
+            <div id="result-emoji" class="result-emoji">🏆</div>
+            <div class="mini-label">MATCH COMPLETED</div>
+            <h2 id="result-title">MLBB LEGEND</h2>
+            <p id="result-message" class="result-message"></p>
+
+            <div class="result-score">
+                <span>YOUR SCORE</span>
+
+                <div class="score-number">
+                    <strong id="final-score">0</strong>
+                    <small> / 15</small>
+                </div>
+
+                <div class="result-progress">
+                    <div id="result-progress-bar"></div>
+                </div>
+
+                <b id="final-percent">0%</b>
+            </div>
+
+            <div class="result-stats">
+                <div>
+                    <strong id="correct-count">0</strong>
+                    <small>BENAR</small>
+                </div>
+                <div>
+                    <strong id="wrong-count">0</strong>
+                    <small>SALAH</small>
+                </div>
+            </div>
+
+            <button id="restart-btn" class="primary-btn">
+                COBA LAGI <span>↻</span>
+            </button>
+
+            <p class="footnote">
+                Whatever the score, jangan feeding di ranked. ♡
+            </p>
+        </section>
+
+        <footer class="footer">
+            <span>MADE WITH ♡</span>
+            <span>NOT AFFILIATED WITH MOONTON</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
